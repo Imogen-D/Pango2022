@@ -4,7 +4,7 @@ Scripts for tracing the trade with ddRADseq SNP data.
 
 This GitHub is a work in progress (I apologise for the inconsistent numbering). All scripts excuted by Imogen Dumville, written by Imogen Dumville with aid of Jordi Salmona. 
 
-#Scripts start on JSalmona Account for initial demultiplexing + alignment
+**Scripts start on JSalmona Account for initial demultiplexing + alignment
 
 script.2.demultiplex_data.sh - demultiplexing
 
@@ -20,7 +20,7 @@ script.3b.chromosomes.sh -indexes and blasts the mtDNA and Xchromosome as well a
 
 
 
-#Scripts and workflow on IDumville account from samfiles
+**Scripts and workflow on IDumville account from samfiles
 
 As follows;
 
