@@ -6,6 +6,10 @@ This GitHub is a work in progress (I apologise for the inconsistent numbering). 
 
 **Scripts start on JSalmona Account for initial demultiplexing + alignment**
 
+syntenyanalysis.sh - finds which chromosome in reference is the X chromosome
+
+mummer.sh - runs mummer with dog and pangolin X
+
 script.2.demultiplex_data.sh - demultiplexing
 
   Calls process_radtags.pg.sh
