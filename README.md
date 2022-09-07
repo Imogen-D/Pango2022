@@ -2,9 +2,25 @@
 
 Scripts for tracing the trade with ddRADseq SNP data.
 
-Scripts start on JSalmona Account for initial demultiplexing
+This GitHub is a work in progress (I apologise for the inconsistent numbering). All scripts excuted by Imogen Dumville, written by Imogen Dumville with aid of Jordi Salmona. 
 
-Scripts and workflow on IDumville account from samfiles
+#Scripts start on JSalmona Account for initial demultiplexing + alignment
+
+script.2.demultiplex_data.sh - demultiplexing
+
+  Calls process_radtags.pg.sh
+  
+script.3.align_rad_data.sh - trimmming then aligns all the data to autosomes, X, mito and checks files
+
+  Calls trimmomatic_low_PE.sh index_genome.sh bwa_miseq2021.sh 
+
+script.3b.chromosomes.sh -indexes and blasts the mtDNA and Xchromosome as well as seperating the X from autosomes
+
+  Calls index_genome.sh blastmito.sh blastxchr.sh sepx_a_stats.sh
+
+
+
+#Scripts and workflow on IDumville account from samfiles
 
 As follows;
 
@@ -36,8 +52,13 @@ As follows;
 
   Calls angsd.he.indv.sh
   
-06.privatealleleresampling.R - resampling PAs
+script.iterate_p_alleles.sh - resampling PAs
 
+  Calls run.iterativepop.sh
+
+  
 08.assignmentmethods.sh - run BONE or rubias or assignPOP (tested but not in manuscript) plus make initial file from vcf
 
   Calls run.assignment.sh
+  
+
