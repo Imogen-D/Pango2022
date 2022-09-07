@@ -17,6 +17,7 @@ touch $indv_loc_dir/metadata.txt
 #making metadata
 awk '{print $1}' $rurlist | while read rurindv; do 
 x=$(grep -w $rurindv $oldmetadata)
+
 printf "$x\n" | sed 's/ /\t/g'  >> $indv_loc_dir/metadata.txt
 done
 printf "$indv NA NA\n" | sed 's/ /\t/g'  >> $indv_loc_dir/metadata.txt
