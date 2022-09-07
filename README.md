@@ -8,7 +8,7 @@ This GitHub is a work in progress (I apologise for the inconsistent numbering). 
 
 syntenyanalysis.sh - finds which chromosome in reference is the X chromosome
 
-mummer.sh - runs mummer with dog and pangolin X
+  Calls mummer.sh
 
 script.2.demultiplex_data.sh - demultiplexing
 
