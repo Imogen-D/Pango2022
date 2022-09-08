@@ -16,8 +16,8 @@ script.2.demultiplex_data.sh - demultiplexing
   
 script.3.align_rad_data.sh - trimmming then aligns all the data to autosomes, X, mito and checks files
 
-  _Calls trimmomatic_low_PE.sh index_genome.sh bwa_miseq2021.sh 
-_
+  _Calls trimmomatic_low_PE.sh index_genome.sh bwa_miseq2021.sh_
+  
 script.3b.chromosomes.sh -indexes and blasts the mtDNA and Xchromosome as well as seperating the X from autosomes
 
   _Calls index_genome.sh blastmito.sh blastxchr.sh sepx_a_stats.sh_
@@ -30,15 +30,15 @@ As follows;
 
 01.alignmentstats_coverage.sh - getting coverage, extract statistics
 
- _ Calls coverage.sh loci.sh (x)cov.plot.all.R loci.plot.R (via intemediate loci.sh, but no longer availble - I had an internet issue in my project so may have been lost here)_
+ _Calls coverage.sh loci.sh (x)cov.plot.all.R loci.plot.R (via intemediate loci.sh, but no longer availble - I had an internet issue in my project so may have been lost here)_
   
 02.stacks_populations.sh - running gstacks (on seperate miseq/other datasets), populations (some seperation for lowreads / different localities, getting private alleles (PAs), unused script for error rate
 
- _ Calls run.gstacks.sh run.population.sh (change Rs, minmac 2-3, hap exports, output file) run.indv.popn.sh run.indvseedpopn.sh_
+ _Calls run.gstacks.sh run.population.sh (change Rs, minmac 2-3, hap exports, output file) run.indv.popn.sh run.indvseedpopn.sh_
   
 02b.ploidy.sh - getting ploidy from bams, check for contamination
 
- _ Calls nQuire_ploidy.sh run_vanquish.sh (which calls vanquish_ploidy_plot.R)_
+ _Calls nQuire_ploidy.sh run_vanquish.sh (which calls vanquish_ploidy_plot.R)_
   
 03.ANGSD.sh - estimate GL and getting beagle, running ngsADMIX, producing likelihood file, plotting + geoplotting - IBD on this script obselete
 
@@ -50,16 +50,16 @@ As follows;
 
 04.locator.sh - runs locator, makes vcfs (indvidual and all lineages), plotting
 
- _ Calls locator.sh iterateseedlocator.sh ALvcfmaking.sh indvlocvcfs.sh plot_locator_sbatch.sh zipping.sh_
+ _Calls locator.sh iterateseedlocator.sh ALvcfmaking.sh indvlocvcfs.sh plot_locator_sbatch.sh zipping.sh_
   
 05.iterativeangsd.sh - to see if iterating angsd over minimal gmin calls changes he (it doesn't)
 
-_  Calls angsd.he.indv.sh_
+_Calls angsd.he.indv.sh_
   
 script.iterate_p_alleles.sh - resampling PAs
 
- _ Calls run.iterativepop.sh_
+ _Calls run.iterativepop.sh_
 
 08.assignmentmethods.sh - run BONE or rubias or assignPOP (tested but not in manuscript) plus make initial file from vcf
 
- _ Calls run.assignment.sh_
+ _Calls run.assignment.sh_
